@@ -76,41 +76,46 @@
   </li>
   <li>
     Back-End/cp-API installation:
-    <ul>
+    <ol>
       <li>
-        1) Run composer install
+        Run composer install
       </li>
       <li>
-        2) setup .env file, add database details, sendgrid API details (copy all the items from .env.example)
+        setup .env file, add database details, sendgrid API details (copy all the items from .env.example)
         </li>
       <li>
-        3) php artisan key:generate
+        php artisan key:generate
         </li>
       <li>
-        4) php artisan storage:link  (create a symlink for storage)
+        php artisan storage:link  (create a symlink for storage)
 </li>
       <li>
-        5) This command is to setup basic data  
+        This command is to setup basic data  
         Run php artisan migrate:refresh --seed
 </li>
       <li>
-6) php artisan setup:sendgrid
+ php artisan setup:sendgrid
         </li>
       <li>
-7) copy sendgrid templates info to .env file.
+ copy sendgrid templates info to .env file.
 </li>
       <li>
-8) php artisan cache:clear
+php artisan cache:clear
         </li>
       <li>
-9) php artisan view:clear
+ php artisan view:clear
         </li>
       <li>
-10) php artisan config:clear
+ php artisan config:clear
         </li>
       <li>
-11) php artisan route:clear
-      </li> </li>
+ php artisan route:clear
+      </li>
+            <li>
+              Run using:<br>
+ php artisan serve
+      </li>
+      </li>
     </ul>
   </li>
  </ol>
