@@ -3,7 +3,7 @@
 
 <ol>
   <li>
-  Prerequisites:
+    Front-end installation:
   <ul>
   <li>
   NVM: Node Version Manager
@@ -74,5 +74,26 @@
     </li>
   </ul>
   </li>
-  
+  <li>
+    Back-End/cp-API installation:
+    <ul>
+      <li>
+        1) Run composer install
+        2) setup .env file, add database details, sendgrid API details (copy all the items from .env.example)
+        3) php artisan key:generate
+        4) php artisan storage:link  (create a symlink for storage)
+
+        5) This command is to setup basic data  
+        Run php artisan migrate:refresh --seed
+
+6) php artisan setup:sendgrid
+7) copy sendgrid templates info to .env file.
+
+8) php artisan cache:clear
+9) php artisan view:clear
+10) php artisan config:clear
+11) php artisan route:clear
+      </li>
+    </ul>
+  </li>
  </ol>
