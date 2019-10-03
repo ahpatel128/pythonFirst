@@ -29,6 +29,49 @@
   mkdir storage/framework storage/framework/cache storage/framework/views storage/framework/sessions storage/fonts storage/logs
   </b>
   </li>
+    <li>
+      Make file in src/environment/envirnment.ts add following code in  that file:
+      <blockquote>
+        export const environment = {
+        production: true,
+     API_URL: 'https://mydd-api.deakindigital.com/api/v1',
+  BASE_URL: 'https://mydd-api.deakindigital.com',
+    S3_URL: 'https://s3-ap-southeast-2.amazonaws.com/',
+    GREENID_CONFIG_JS_URL:'https://simpleui-test-au.vixverify.com/df/javascripts/greenidConfig.js',
+  GREENID_CSS_URL:'https://simpleui-test-au.vixverify.com/df/assets/stylesheets/greenid.css',
+  GREENID_UI_JS_URL:'https://simpleui-test-au.vixverify.com/df/javascripts/greenidui.min.js',
+  GREENID_ACCOUNT_ID:'deakinco',
+  GREENID_API_CODE:'MCc-Hfs-hBH-rLw',
+  GREENID_ENVIRONMENT: 'test',
+  GOOGLE_SITE_KEY: '6Lcis4IUAAAAAJDpQck3hjme-JdpyEGTKLmqAUrL',
+  TITLE: 'My micro-credentials',
+  PPC: false,
+  SSO_LINK: '',
+  PPC_URL: '',
+  HOTJAR_TRACKING_ID : '1284853'
+  };
+      </blockquote>
+    </li>
+    <li>
+      Run Following command to create link and add ppc components:
+      <b>
+        ln -sfn mmc-components angular-components
+      </b>
+      <br>
+      <b>
+       ln -sfn ppc-components angular-components 
+      </b>
+      <br>
+      <b>
+        ng build --output-path="./build-$TIMESTAMP" --build-optimizer --aot --vendor-chunk=false --source-map=false --named-chunks=false --optimization --output-hashing=all
+      </b>
+    </li>
+    <li>
+      Run the project.
+      use following code:
+      <br>
+      <b>ng serve</b>
+    </li>
   </ul>
   </li>
   
